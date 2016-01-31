@@ -12,3 +12,8 @@ This script adds awareness to Git about which SSH key should be used when pushin
     keypath = $HOME/.ssh/key-name
 ```
 4. Push and pull as normal but using your new key
+
+## How It Works
+
+All that happens is the alias looks for the config variable and exports a environment variable named `GIT_SSH_COMMAND`
+which points to your key. Git uses this when it does anything SSH related.
