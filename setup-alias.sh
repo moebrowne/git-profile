@@ -1,4 +1,3 @@
 #!/bin/bash
 
-GIT_AUTHOR_NAME='testname' GIT_AUTHOR_EMAIL='test@domain.tld' GIT_COMMITTER_NAME='testname' GIT_COMMITTER_EMAIL='test@domain.tld' GIT_SSH_COMMAND='ssh -i /tmp/gitkey' git $@
-
+echo "unset GIT_SSH_COMMAND; git config -l | grep -q ssh.keypath; test $? -eq 0 && export GIT_SSH_COMMAND=\"ssh -i $HOME/.ssh/your-key\"; git" > ~/.bash_aliases
