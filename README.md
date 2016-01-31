@@ -18,3 +18,7 @@ This script adds awareness to Git about which SSH key should be used when pushin
 All that happens is the alias looks for the config variable `SSH.keypath` and if found exports the value of the config
 entry to an environment variable named `GIT_SSH_COMMAND`. Git uses this when it does anything SSH related and will make
 use of the key you configured.
+
+## Requirements
+
+Git v2.3 or above
