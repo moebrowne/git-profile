@@ -11,7 +11,7 @@ This script adds awareness to Git about which SSH key should be used when pushin
 [SSH]
     keypath = $HOME/.ssh/key-name
 ```
-4. Push and pull as normal but using your new key
+You can now push and pull as normal but Git will use the key you have specified
 
 ## How It Works
 
